@@ -1,5 +1,4 @@
 # RAG
-We need to pick a model and at the moment it feels like all the good models are based on "meta-llama", so we will pick "meta-llama/Llama-2-7b-hf".
 According to the ULMFiT approach the llama-2 ( 7 billion ) has only been upto to the LM-Pretraining phase, it has done none of the fine tuning or instruction tuning. 
 We will implement a framework to help large language model be more accurate and upto date. This is called Retrieval Augmented Generation ( RAG ) 
 Let's talk about the generation part for now 
