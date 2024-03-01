@@ -23,9 +23,16 @@ Let's try this out by ourselves
 **Preparing the data** - Let's say we have a big document, we are going to split the document into smaller chunks. A chunk could be a paragraph, a sentence or several pages. By doing this, the outcome that we are looking for when we search through all of this data, each chunk is going to be more focused and more relevant.To achieve this we used a recursive character text splitter. We made the chunk size to be a 1000 characters and each chunk is going to have an overlap of 500 characters.
 
 **Creating Chroma Database** - To be able to query each chunk, we are going to need to turn this into a database.
+
+![DB](/database.png)
+
 **Vector Embedding** - Embeddings are vector representations of text that capture their meaning. In python, this is literally a list of numbers. They can be thought of as coordinates in multidimensional space. If two pieces of text are closely related to each other in meaning, then these coordinates will also be close together.
 The distance between these vectors can then be calculated using cosine similarity or euclidean distance.
 
+![VE](/vector_embeddings.png)
+
 **Querying** - To query for relevant data, our objective is to find the chunks in our database that will most likely contain the answer to the question that we want to ask. So our goal now is to take a query, then turn that into an embedding using an embedding function and then scan through our database and find, say, 5 chunks of information that closest in embedding distance from our query. From here, we can put them together and have the model that we are using read all of that information and decide the response to show the user.
+
+![Q](/querying.png)
 
 **Creating a response** - We will create a prompt template to create a prompt with. Prompt will contain the context that we pass in. The context would be the pieces of information that we got from the database and the actual query.
