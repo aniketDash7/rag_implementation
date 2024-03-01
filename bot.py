@@ -12,7 +12,7 @@ import argparse
 
 DATA_PATH = "data"
 CHROMA_PATH = "chroma"
-OPENAI_API = "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"
+OPENAI_API = "secret_key" #I removed it for privacy reasons
 
 PROMPT_TEMPLATE = """
 
